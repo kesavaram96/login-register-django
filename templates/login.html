@@ -1,0 +1,15 @@
+<form action="login" method="POST">
+    {% csrf_token %} Username
+    <input type="text" name="username"> Password
+    <input type="password" name="password">
+    <input type="submit">
+</form>
+
+<a href="Register"> Register</a>
+<div>
+    {% for message in messages %}
+
+    <h4> {{ message }}</h4>
+
+    {% endfor %}
+</div>
